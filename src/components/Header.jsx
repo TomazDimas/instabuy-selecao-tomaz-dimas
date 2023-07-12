@@ -12,12 +12,15 @@ function Header() {
   return (
     <header>
       <div className={ styles.container }>
-        <a href="/">
+        <a href="/" className={ styles.container__logo }>
           <img
             src="https://ibassets.com.br/ib.store.image.medium/m-0cd410fa3a4844acb4294a0edfea3822.png"
             alt="Supermercado Modelo"
           />
-          <p>Supermercado Modelo</p>
+          <p>
+            Supermercado
+            Modelo
+          </p>
         </a>
         <form>
           <input type="text" />

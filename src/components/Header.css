@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10em;
+  background-color: aqua;
+}
+
+.container * {
+  margin: 1em;
+}
+
+.container__logo {
+  /* composes: container__element */
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__logo img {
+  height: 5em;
+}
+
+.container__logo p {
+  width: 2em;
+  color: black;
+  text-decoration: none;
+}
+
+.container input {
+ flex-grow: 5; 
+}
