@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   font-size: 100%;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Epilogue', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f9f9f9;
 }
