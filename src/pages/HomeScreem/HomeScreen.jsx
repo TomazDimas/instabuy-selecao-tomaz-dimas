@@ -1,8 +1,9 @@
 import React from 'react';
+import './HomeScreen.css';
 
 function HomeScreen() {
   return (
-    <p>home</p>
+    <div>HomeScreen</div>
   );
 }
 
