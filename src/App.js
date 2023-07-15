@@ -3,10 +3,11 @@ import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import HomeScreen from './pages/HomeScreem/HomeScreen';
 import ProductScreen from './pages/ProductScreen/ProductScreen';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <NavBar />
       <Routes>
