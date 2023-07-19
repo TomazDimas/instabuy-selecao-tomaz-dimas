@@ -16,7 +16,7 @@ function Navegation() {
       <div className="navbar-container">
         <NavLink to="/" className="navbar-container__item">
           <AiOutlineHome />
-          Home
+          Início
         </NavLink>
         <NavLink to="/categories" className="navbar-container__item">
           <AiOutlineAppstore />
@@ -36,7 +36,7 @@ function Navegation() {
         </NavLink>
         <NavLink to="/dairy" className="navbar-container__item">
           <BiCheese />
-          Laticínios
+          Frios e Laticínios
         </NavLink>
         <NavLink to="/drinks" className="navbar-container__item">
           <BiDrink />
