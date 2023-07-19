@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCell from '../ProductCell/ProductCell';
 import './ProductBar.css';
 
 function ProductBar() {
@@ -6,9 +7,9 @@ function ProductBar() {
     <div className="product-bar-container">
       <h1>Título</h1>
       <div className="product-container">
-        <h2>item</h2>
-        <h2>item</h2>
-        <h2>item</h2>
+        <ProductCell />
+        <ProductCell />
+        <ProductCell />
       </div>
     </div>
   );
