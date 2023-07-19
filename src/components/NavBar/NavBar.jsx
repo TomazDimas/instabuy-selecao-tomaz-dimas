@@ -15,31 +15,31 @@ function Navegation() {
     <nav className="navbar">
       <div className="navbar-container">
         <NavLink to="/" className="navbar-container__item">
-          <AiOutlineHome />
+          <AiOutlineHome className="navbar-container__icon" />
           Início
         </NavLink>
         <NavLink to="/categories" className="navbar-container__item">
-          <AiOutlineAppstore />
+          <AiOutlineAppstore className="navbar-container__icon" />
           Todas Categorias
         </NavLink>
         <NavLink to="/offers" className="navbar-container__item">
-          <AiOutlineTags />
+          <AiOutlineTags className="navbar-container__icon" />
           Ofertas
         </NavLink>
         <NavLink to="/barbecue" className="navbar-container__item">
-          <GiBarbecue />
+          <GiBarbecue className="navbar-container__icon" />
           Kit Churrasco
         </NavLink>
         <NavLink to="/meats" className="navbar-container__item">
-          <TbMeat />
+          <TbMeat className="navbar-container__icon" />
           Açougue/ Aves/ Peixaria
         </NavLink>
         <NavLink to="/dairy" className="navbar-container__item">
-          <BiCheese />
+          <BiCheese className="navbar-container__icon" />
           Frios e Laticínios
         </NavLink>
         <NavLink to="/drinks" className="navbar-container__item">
-          <BiDrink />
+          <BiDrink className="navbar-container__icon" />
           Bebidas Alcoólicas
         </NavLink>
       </div>

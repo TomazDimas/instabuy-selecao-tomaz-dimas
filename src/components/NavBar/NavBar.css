@@ -23,13 +23,25 @@
 
 .navbar-container__item {
     color: black;
+    padding: 13px 5px;
+    border-radius: 5px;
     font-size: 1.2em;
+    font-weight: 500;
     white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color .2s;
+}
+.navbar-container__item:hover {
+    background-color: #EAEAEA;
 }
 
 .navbar-container__item:not(:last-child) {
     margin-right: 1em;
+}
+
+.navbar-container__icon {
+    font-size: 1.3em;
+    margin-right: 5px;
 }
