@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ProductBar from '../../components/ProductBar/ProductBar';
+import PromoProductBar from '../../components/ProductBar/PromoProductBar';
 import Slider from '../../components/Slider/Slider';
 import './HomeScreen.css';
 
@@ -32,7 +33,10 @@ function HomeScreen() {
   return (
     <div className="home-container">
       <Slider />
-      <ProductBar products={ promoProducts } />
+      <PromoProductBar products={ promoProducts } />
+      { products.map((collection) => (
+        <ProductBar key={ collection.id } data={ collection } />
+      )) }
     </div>
   );
 }

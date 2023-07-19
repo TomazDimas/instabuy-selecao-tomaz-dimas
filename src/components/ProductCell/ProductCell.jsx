@@ -13,14 +13,9 @@ function ProductCell({ data }) {
         className="product-cell__image"
       />
       <div className="product-cell__info">
-        <div className="product-cell__prices">
-          <h3 className=" product-cell__promo-price">
-            {formatCurrency(data.prices[0].promo_price, 'BRL')}
-          </h3>
-          <h3 className=" product-cell__normal-price">
-            {formatCurrency(data.prices[0].price, 'BRL')}
-          </h3>
-        </div>
+        <h3 className="product-cell__price">
+          {formatCurrency(data.prices[0].price, 'BRL')}
+        </h3>
         <h2 className=" product-cell__title">{data.name}</h2>
       </div>
       <button type="button" className="product-cell__button">
