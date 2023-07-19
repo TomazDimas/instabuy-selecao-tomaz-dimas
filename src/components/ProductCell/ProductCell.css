@@ -31,6 +31,13 @@
   margin-right: 1em;
 }
 
+.product-cell__price {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: black;
+  display: block;
+}
+
 .product-cell__normal-price {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: line-through;
@@ -58,6 +65,7 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
+  transition: background-color .2s;
 }
 
 .product-cell__button:hover {
