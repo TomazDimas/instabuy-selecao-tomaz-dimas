@@ -4,8 +4,6 @@ import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import banners from '../../assets/banners/banners';
 import './Slider.css';
-import 'swiper/css';
-import 'swiper/css/autoplay';
 
 function Slider() {
   return (
@@ -14,6 +12,7 @@ function Slider() {
         modules={ [Autoplay] }
         autoplay={ { delay: 5000 } }
         slidesPerView={ 1 }
+        loop
       >
         { banners.map((item) => (
           <SwiperSlide key={ item.id }>
