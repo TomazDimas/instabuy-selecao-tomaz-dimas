@@ -1,3 +1,28 @@
+.product-bar-container {
+  width: 100%;
+  max-width: 85em;
+  margin: 1em auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.product-bar__title {
+  margin-left: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-bar__icon {
+ color: #4cb334;
+  margin-right: 10px;
+}
+
 .product-container {
   display: flex;
+  width: 100%;
+  max-width: 85em;
+  margin: 0 auto;
 }
