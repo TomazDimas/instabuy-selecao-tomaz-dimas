@@ -26,7 +26,6 @@ function ProductBar({ data }) {
             ) : (
               <ProductCell data={ product } />
             )}
-            {/* <ProductCell data={ product } /> */}
           </SwiperSlide>
         ))}
       </Swiper>

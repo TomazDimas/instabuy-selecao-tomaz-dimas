@@ -19,8 +19,6 @@ function HomeScreen() {
       const { data } = response.data;
       setPromoProducts(data.promo);
       setProducts(data.collection_items);
-      console.log(data);
-      console.log(products);
     } catch (error) {
       console.log(error);
     }
