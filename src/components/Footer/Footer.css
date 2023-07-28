@@ -1,0 +1,17 @@
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 2em 0;
+}
+
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-container h2 {
+  font-weight: 400;
+  line-height: 1.7em;
+}
