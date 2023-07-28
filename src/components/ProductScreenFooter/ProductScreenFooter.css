@@ -1,0 +1,15 @@
+.product-screen-footer-container {
+  width: 100%;
+  max-width: 85em;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2em 1em;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.product-screen-footer__text {
+  font-weight: 400;
+}
