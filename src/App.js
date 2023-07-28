@@ -9,17 +9,24 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import Footer from './components/Footer/Footer';
+import Provider from './context/Provider';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={ <HomeScreen /> } />
-        <Route path="p/:slug" element={ <ProductScreen /> } />
-      </Routes>
-    </div>
+    <Provider>
+      <div className="app">
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={ <HomeScreen /> } />
+          <Route path="p/:slug" element={ <ProductScreen /> } />
+        </Routes>
+        <Cart />
+        <Footer />
+      </div>
+    </Provider>
   );
 }
 
