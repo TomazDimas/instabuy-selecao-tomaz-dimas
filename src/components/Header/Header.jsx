@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   AiOutlineUnorderedList,
   AiOutlineUser,
   AiOutlineCaretDown,
   AiOutlineShoppingCart,
 } from 'react-icons/ai';
+import CartContext from '../../context/CartContext';
 import SearchBar from '../SearchBar/SearchBar';
 import './Header.css';
 
 function Header() {
+  const { setIsCartOpen } = useContext(CartContext);
+
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
@@ -34,7 +41,11 @@ function Header() {
           <AiOutlineCaretDown />
         </button>
         {/* CARRINHO */}
-        <button type="button" className="header-container__cart">
+        <button
+          type="button"
+          className="header-container__cart"
+          onClick={ handleOpenCart }
+        >
           <AiOutlineShoppingCart className="header-container__cart__icon" />
           <p>Carrinho</p>
         </button>

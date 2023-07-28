@@ -53,6 +53,7 @@
   font-weight: 600;
   align-items: center;
   transition: background-color .2s;
+  cursor: pointer;
 }
 
 .header-container__list:hover {
@@ -75,6 +76,7 @@
   font-weight: 600;
   align-items: center;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .header-container__account:hover {
@@ -102,6 +104,7 @@
   font-weight: 600;
   align-items: center;
   transition: background-color .2s;
+  cursor: pointer;
 }
 
 .header-container__cart:hover {
