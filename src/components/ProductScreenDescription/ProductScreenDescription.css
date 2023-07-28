@@ -1,0 +1,25 @@
+.product-description-container {
+  width: 100%;
+  max-width: 85em;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2em 1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.product-description__title {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.product-description__text {
+  margin-bottom: 1.3em;
+  font-size: 1.1em;
+  font-weight: 400;
+}
