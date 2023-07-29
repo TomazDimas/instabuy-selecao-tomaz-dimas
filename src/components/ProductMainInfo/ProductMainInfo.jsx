@@ -9,7 +9,7 @@ import ProductScreenSlider from '../ProductScreenSlider/ProductScreenSlider';
 import CartContext from '../../context/CartContext';
 
 function ProductMainInfo({ productData }) {
-  const [cartAmmount, setCartAmmount] = useState(0);
+  const [cartAmmount, setCartAmmount] = useState(1);
   const { cartProducts, setCartProducts } = useContext(CartContext);
 
   const handleClickAdd = () => {
@@ -24,6 +24,21 @@ function ProductMainInfo({ productData }) {
 
   const handleAddCart = () => {
     setCartProducts([...cartProducts, productData]);
+    const currentCart = [...cartProducts];
+    const formatProduct = {
+      id: productData.id,
+      ammount: cartAmmount,
+      data: productData,
+    };
+    const productIndex = currentCart.findIndex(
+      (product) => product.id === productData.id,
+    );
+    if (productIndex >= 0) {
+      currentCart[productIndex].ammount = cartAmmount;
+      setCartProducts(currentCart);
+    } else {
+      setCartProducts([...cartProducts, formatProduct]);
+    }
   };
 
   return (

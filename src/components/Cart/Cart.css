@@ -13,6 +13,10 @@
   border-left: 1px solid rgb(209, 209, 209);
 }
 
+.cart-container--active {
+  display: none;
+}
+
 .cart-title-container {
   display: flex;
   width: 100%;
@@ -20,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(209, 209, 209);
-  padding: 2em 2em;
+  padding: 1em 2em;
 }
 
 .cart-title__icon {
@@ -49,10 +53,6 @@
 
 .cart-title__clean:hover {
   background-color: rgb(209, 209, 209);
-}
-
-.cart-container--active {
-  display: none;
 }
 
 .cart-button-container {

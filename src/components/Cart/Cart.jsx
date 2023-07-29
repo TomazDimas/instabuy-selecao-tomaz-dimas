@@ -13,6 +13,15 @@ function Cart() {
     setIsCartOpen(false);
   };
 
+  const getCartTotal = () => {
+    if (cartProducts.length > 0) {
+      const totalValue = cartProducts.reduce((acc, curr) => {
+        return acc + (curr.data.prices[0].price * curr.ammount);
+      }, 0);
+      return totalValue;
+    } return 0;
+  };
+
   return (
     <div className={ isCartOpen ? 'cart-container' : 'cart-container--active' }>
       <div className="cart-title-container">
@@ -22,13 +31,15 @@ function Cart() {
       </div>
       <div className="cart-items-container">
         {cartProducts.map((product) => (
-          <CartItem key={ product.id } productData={ product } />
+          <CartItem key={ product.id } productData={ product.data } />
         ))}
       </div>
       <div className="cart-button-container">
         <div className="cart-inner-button-container">
           <h2 className="cart-inner-button__text">Finalizar Compra</h2>
-          <h2 className="cart-inner-button__price">{ formatCurrency(32.90, 'BRL') }</h2>
+          <h2 className="cart-inner-button__price">
+            { formatCurrency(getCartTotal(), 'BRL') }
+          </h2>
         </div>
       </div>
     </div>

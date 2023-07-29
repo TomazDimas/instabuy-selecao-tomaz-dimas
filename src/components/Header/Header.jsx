@@ -5,6 +5,7 @@ import {
   AiOutlineCaretDown,
   AiOutlineShoppingCart,
 } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 import CartContext from '../../context/CartContext';
 import SearchBar from '../SearchBar/SearchBar';
 import './Header.css';
@@ -20,13 +21,13 @@ function Header() {
     <header className="header">
       <div className="header-container">
         {/* LOGO */}
-        <a href="/" className="header-container__home">
+        <NavLink to="/" className="header-container__home">
           <img
             src="https://ibassets.com.br/ib.store.image.medium/m-0cd410fa3a4844acb4294a0edfea3822.png"
             alt="Supermercado Modelo"
           />
           <p>Supermercado Modelo</p>
-        </a>
+        </NavLink>
         {/* SEARCH */}
         <SearchBar />
         {/* LISTA */}
