@@ -35,9 +35,8 @@ function HomeScreen() {
       const { data } = response.data;
       setPromoProducts(data.promo);
       setProducts(data.collection_items);
-      setIsLoaded(true);
       await setBanners(data.banners);
-      filterBannerList();
+      setIsLoaded(true);
     } catch (error) {
       console.log(error);
     }
@@ -49,7 +48,8 @@ function HomeScreen() {
 
   useEffect(() => {
     getProducts();
-  }, []);
+    filterBannerList();
+  }, [banners]);
 
   return (
     (!isLoaded && <Loading />) || (
