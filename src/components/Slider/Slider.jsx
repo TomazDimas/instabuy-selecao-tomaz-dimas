@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
+import propTypes from 'prop-types';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import banners from '../../assets/banners/banners';
 import './Slider.css';
 
-function Slider() {
+function Slider({ banners }) {
   return (
     <div className="swiper-container">
       <Swiper
@@ -14,10 +15,10 @@ function Slider() {
         slidesPerView={ 1 }
         loop
       >
-        { banners.map((item) => (
-          <SwiperSlide key={ item.id }>
+        { banners.map((banner) => (
+          <SwiperSlide key={ banner.id }>
             <img
-              src={ item.img }
+              src={ `https://assets.instabuy.com.br/ib.store.banner/bnr-${banner.image}` }
               alt="banner"
               className="swiper-slide__image"
             />
@@ -29,3 +30,7 @@ function Slider() {
 }
 
 export default Slider;
+
+Slider.propTypes = {
+  productData: propTypes.shape({}),
+}.isRequired;
