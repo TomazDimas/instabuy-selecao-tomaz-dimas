@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 import { AiOutlinePlus } from 'react-icons/ai';
 import './ProductCell.css';
 import { Link } from 'react-router-dom';
 import formatCurrency from '../../utils/formatCurrency';
+import addProductToCart from '../../utils/addPoductToCart';
+import CartContext from '../../context/CartContext';
 
 function PromoProductCell({ data }) {
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+
+  const getProductAmmount = () => {
+    if (cartProducts.find((product) => product.id === data.id)) {
+      return cartProducts.find((product) => product.id === data.id).ammount;
+    } return 0;
+  };
+
   return (
     <div className="product-cell-container">
       <Link to={ `/p/${data.slug}` }>
@@ -26,9 +36,34 @@ function PromoProductCell({ data }) {
           <h2 className=" product-cell__title">{data.name}</h2>
         </div>
       </Link>
-      <button type="button" className="product-cell__button">
-        <AiOutlinePlus />
-      </button>
+      { getProductAmmount() > 0 ? (
+        <button
+          onClick={ () => addProductToCart(
+            data,
+            getProductAmmount() + 1,
+            cartProducts,
+            setCartProducts,
+          ) }
+          type="button"
+          className="product-cell__ammount"
+        >
+          { getProductAmmount() }
+        </button>
+      ) : (
+
+        <button
+          onClick={ () => addProductToCart(
+            data,
+            getProductAmmount() + 1,
+            cartProducts,
+            setCartProducts,
+          ) }
+          type="button"
+          className="product-cell__button"
+        >
+          <AiOutlinePlus />
+        </button>
+      ) }
     </div>
   );
 }
