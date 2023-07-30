@@ -11,7 +11,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import './Header.css';
 
 function Header() {
-  const { setIsCartOpen } = useContext(CartContext);
+  const { cartProducts, setIsCartOpen } = useContext(CartContext);
 
   const handleOpenCart = () => {
     setIsCartOpen(true);
@@ -49,6 +49,11 @@ function Header() {
         >
           <AiOutlineShoppingCart className="header-container__cart__icon" />
           <p>Carrinho</p>
+          {cartProducts.length > 0 && (
+            <span className="header-container__cart__ammount">
+              {cartProducts.length}
+            </span>
+          )}
         </button>
       </div>
     </header>
