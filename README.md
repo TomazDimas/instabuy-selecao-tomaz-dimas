@@ -9,7 +9,7 @@ Uma tela inicial que contém os produtos separados por categorias e uma tela de 
 Além disso, possui um carrinho de compras funcional e é uma aplicação responsiva a tamanhos de tela.
 
 ## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
+![Mobile 1](https://github.com/TomazDimas/instabuy-selecao-tomaz-dimas/blob/main/assets/instabuy-home-screen.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
 
 ## Layout web
 ![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
