@@ -7,6 +7,8 @@ import './ProductMainInfo.css';
 import formatCurrency from '../../utils/formatCurrency';
 import ProductScreenSlider from '../ProductScreenSlider/ProductScreenSlider';
 import CartContext from '../../context/CartContext';
+import removeProductById from '../../utils/removeProductById';
+import addProductToCart from '../../utils/addPoductToCart';
 
 function ProductMainInfo({ productData }) {
   const [cartAmmount, setCartAmmount] = useState(1);
@@ -20,25 +22,6 @@ function ProductMainInfo({ productData }) {
   const handleClickDecrease = () => {
     const currentAmmount = cartAmmount;
     setCartAmmount(currentAmmount - 1);
-  };
-
-  const handleAddCart = () => {
-    setCartProducts([...cartProducts, productData]);
-    const currentCart = [...cartProducts];
-    const formatProduct = {
-      id: productData.id,
-      ammount: cartAmmount,
-      data: productData,
-    };
-    const productIndex = currentCart.findIndex(
-      (product) => product.id === productData.id,
-    );
-    if (productIndex >= 0) {
-      currentCart[productIndex].ammount = cartAmmount;
-      setCartProducts(currentCart);
-    } else {
-      setCartProducts([...cartProducts, formatProduct]);
-    }
   };
 
   return (
@@ -73,7 +56,7 @@ function ProductMainInfo({ productData }) {
             { cartAmmount < 1 ? (
 
               <button
-                className="main-add-buttons__button"
+                className="main-add-buttons__button main-add-button__remove"
                 type="button"
               >
                 <BsTrash />
@@ -96,13 +79,33 @@ function ProductMainInfo({ productData }) {
               <BsPlusLg />
             </button>
           </div>
-          <button
-            onClick={ handleAddCart }
-            className="main-button-container__add"
-            type="button"
-          >
-            Adicionar
-          </button>
+          { cartAmmount === 0 ? (
+            <button
+              onClick={ () => removeProductById(
+                productData.id,
+                cartProducts,
+                setCartProducts,
+              ) }
+              className="main-button-container__add"
+              type="button"
+            >
+              Remover
+            </button>
+          ) : (
+
+            <button
+              onClick={ () => addProductToCart(
+                productData,
+                cartAmmount,
+                cartProducts,
+                setCartProducts,
+              ) }
+              className="main-button-container__add"
+              type="button"
+            >
+              Adicionar
+            </button>
+          ) }
         </div>
       </div>
     </div>
