@@ -8,6 +8,22 @@ import './ProductBar.css';
 import PromoProductCell from '../ProductCell/PromoProductCell';
 
 function PromoProductBar({ products }) {
+  const { innerWidth } = window;
+  const desktopWidth = 960;
+
+  const setSlidesProductBar = () => {
+    const desktopNumber = 5;
+    const mobileNumber = 3;
+    if (innerWidth > desktopWidth) return desktopNumber;
+    return (innerWidth > desktopWidth ? desktopNumber : mobileNumber);
+  };
+
+  const setSpaceProductBar = () => {
+    const desktopNumber = 150;
+    const mobileNumber = 120;
+    return (innerWidth > desktopWidth ? desktopNumber : mobileNumber);
+  };
+
   return (
     <div className="product-bar-container">
       <h1 className="product-bar__title">
@@ -17,9 +33,9 @@ function PromoProductBar({ products }) {
       <Swiper
         pagination={ { clickable: true } }
         navigation
-        spaceBetween={ 50 }
+        spaceBetween={ setSpaceProductBar() }
         modules={ [Navigation] }
-        slidesPerView={ 6 }
+        slidesPerView={ setSlidesProductBar() }
         className="product-container"
       >
         {products.map((product) => (
