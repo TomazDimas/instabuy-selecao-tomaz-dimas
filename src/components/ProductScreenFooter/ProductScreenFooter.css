@@ -13,3 +13,15 @@
 .product-screen-footer__text {
   font-weight: 400;
 }
+
+@media (max-width: 1400px) {
+  .product-screen-footer-container {
+    max-width: 70em;
+  }
+}
+
+@media (max-width: 1150px) {
+  .product-screen-footer-container {
+    max-width: 80%;
+  }
+}

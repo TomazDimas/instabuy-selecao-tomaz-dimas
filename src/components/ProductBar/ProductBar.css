@@ -26,3 +26,39 @@
   max-width: 85em;
   margin: 0 auto;
 }
+
+@media (max-width: 1450px) {
+  .product-bar-container {
+      max-width: 70em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-bar-container {
+      max-width: 55em;
+  }
+}
+
+@media (max-width: 960px) {
+  .product-bar-container {
+      max-width: 40em;
+  }
+}
+
+@media (max-width: 700px) {
+  .product-bar-container {
+      max-width: 30em;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-bar-container {
+      max-width: 25em;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-bar-container {
+      max-width: 20em;
+  }
+}

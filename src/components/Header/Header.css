@@ -105,6 +105,7 @@
   align-items: center;
   transition: background-color .2s;
   cursor: pointer;
+  position: relative;
 }
 
 .header-container__cart:hover {
@@ -114,4 +115,47 @@
 .header-container__cart__icon {
   margin-right: 0.5em;
   font-size: 1.4em;
+}
+
+.header-container__cart__ammount {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background-color: #e91e63;
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .header-container__list {
+      display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .header-container__account {
+      display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .header-container__home p {
+      display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container__cart {
+    padding: 1em;
+  }
+  .header-container__cart p {
+      display: none;
+  }
+  .header-container__cart__icon {
+    margin-right: 0;
+  }
 }

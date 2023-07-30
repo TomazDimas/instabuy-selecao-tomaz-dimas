@@ -15,3 +15,24 @@
   font-weight: 400;
   line-height: 1.7em;
 }
+
+@media (max-width: 1000px) {
+  .footer-container h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-container h2 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-container h2 {
+    font-size: 0.7em;
+  }
+  .footer-container h1 {
+    font-size: 0.8em;
+  }
+}

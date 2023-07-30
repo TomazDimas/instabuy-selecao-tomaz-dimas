@@ -21,3 +21,9 @@
 .search-bar__icon {
   margin: 0 0.7em;
 } 
+
+@media (max-width: 500px) {
+  .search-bar__input {
+    display: none;
+  }
+}

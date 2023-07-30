@@ -3,3 +3,21 @@
   width: 100%;
   margin-bottom: 20em;
 }
+
+@media (max-width: 1150px) {
+  .product-screen-container  {
+    margin-bottom: 23em;
+  }
+}
+
+@media (max-width: 890px) {
+  .product-screen-container  {
+    margin-bottom: 24em;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-screen-container  {
+    margin-bottom: 27em;
+  }
+}

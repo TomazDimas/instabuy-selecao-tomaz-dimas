@@ -2,3 +2,21 @@
   margin-top: 9em;
   margin-bottom: 18em;
 }
+
+@media (max-width: 1150px) {
+  .home-container  {
+    margin-bottom: 20em;
+  }
+}
+
+@media (max-width: 890px) {
+  .home-container  {
+    margin-bottom: 24em;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-container  {
+    margin-bottom: 27em;
+  }
+}
