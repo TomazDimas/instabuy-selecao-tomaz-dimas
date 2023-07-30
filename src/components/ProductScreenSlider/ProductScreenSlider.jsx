@@ -17,7 +17,7 @@ function ProductScreenSlider({ images }) {
       >
         {images.map((image) => (
           <SwiperSlide key={ image }>
-            <img alt="product-thumb" src={ `https://assets.instabuy.com.br/ib.item.image.big/b-${image}` } />
+            <img className="product-image-slider__image" alt="product-thumb" src={ `https://assets.instabuy.com.br/ib.item.image.big/b-${image}` } />
           </SwiperSlide>
         ))}
       </Swiper>
