@@ -16,62 +16,37 @@ Além disso, possui um carrinho de compras funcional e é uma aplicação respon
 ## Layout mobile
 ![Mobile 1](https://github.com/TomazDimas/instabuy-selecao-tomaz-dimas/blob/main/assets/instabuy-mobile-home-screen.png) ![Mobile 2](https://github.com/TomazDimas/instabuy-selecao-tomaz-dimas/blob/main/assets/instabuy-mobile-product-screen.png)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
-
 # Tecnologias utilizadas
-## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
 ## Front end
-- HTML / CSS / JS / TypeScript
+- HTML / CSS / JavaScript
 - ReactJS
-- React Native
-- Apex Charts
-- Expo
-## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+- Axios
+- Html-React-Parser
+- react-icons
+- React Router Dom
+- Swiper
 
 # Como executar o projeto
 
 ## Back end
-Pré-requisitos: Java 11
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone git@github.com:TomazDimas/instabuy-selecao-tomaz-dimas.git
 
-# entrar na pasta do projeto back end
-cd backend
+# entrar na pasta do projeto
+cd instabuy-selecao
 
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
+# instalar as dependencias
+npm install
 
 # executar o projeto
-yarn start
+npm start
 ```
 
 # Autor
 
-Wellington Mazoni de Andrade
+Tomaz Dimas Souza Wey de Brito
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/tomazdimas/
 
