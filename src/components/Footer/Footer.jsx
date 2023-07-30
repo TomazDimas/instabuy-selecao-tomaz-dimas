@@ -22,7 +22,7 @@ function Footer() {
           correspondente não será cobrado. Proibida a venda de bebidas
           alcoólicas para menores de 18 anos. Beba com moderação.
         </h2>
-        <h2>Desenvolvido por Tomaz Dimas</h2>
+        <h1>Desenvolvido por Tomaz Dimas</h1>
       </div>
     </div>
   );
