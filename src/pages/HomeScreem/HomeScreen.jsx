@@ -8,9 +8,23 @@ import Slider from '../../components/Slider/Slider';
 import './HomeScreen.css';
 
 function HomeScreen() {
+  const { innerWidth } = window;
   const [promoProducts, setPromoProducts] = useState([]);
   const [products, setProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [banners, setBanners] = useState([]);
+  const [shownBanners, setShownBanners] = useState([]);
+
+  const filterBannerList = () => {
+    const desktopWidth = 960;
+    const currentBanners = banners
+      .filter((banner) => {
+        console.log(banner.is_desktop);
+        return banner.is_desktop === innerWidth > desktopWidth;
+      });
+    console.log(currentBanners);
+    setShownBanners(currentBanners);
+  };
 
   const getProducts = async () => {
     const baseUrl = 'https://api.instabuy.com.br/apiv3/';
@@ -22,9 +36,15 @@ function HomeScreen() {
       setPromoProducts(data.promo);
       setProducts(data.collection_items);
       setIsLoaded(true);
+      await setBanners(data.banners);
+      filterBannerList();
     } catch (error) {
       console.log(error);
     }
+  };
+
+  document.body.onresize = () => {
+    filterBannerList();
   };
 
   useEffect(() => {
@@ -34,7 +54,7 @@ function HomeScreen() {
   return (
     (!isLoaded && <Loading />) || (
       <div className="home-container">
-        <Slider />
+        <Slider banners={ shownBanners } />
         <PromoProductBar products={ promoProducts } />
         {products.map((collection) => (
           <ProductBar key={ collection.id } data={ collection } />
