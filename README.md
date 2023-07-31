@@ -7,7 +7,7 @@ https://instabuy-selecao-tomaz-dimas.vercel.app/
 Supermercado Modelo é uma aplicação que simula uma loja online de produtos de supermercado, e foi contruída como etapa do processo de seleção da [Instabuy](https://www.instabuy.com.br/ "Site da Instabuy")
 
 A aplicação possui 2 páginas principais.
-Uma tela inicial que contém os produtos separados por categorias e uma tela de produtos com informações mais específicas sobre cada produto.
+Uma tela inicial que contém os produtos separados por categorias e uma tela de produtos com informações mais específicas sobre cada um deles.
 Além disso, possui um carrinho de compras funcional e é uma aplicação responsiva a tamanhos de tela.
 
 ## Layout web
