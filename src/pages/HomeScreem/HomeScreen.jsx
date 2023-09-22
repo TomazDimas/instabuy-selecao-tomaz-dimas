@@ -19,10 +19,8 @@ function HomeScreen() {
     const desktopWidth = 960;
     const currentBanners = banners
       .filter((banner) => {
-        console.log(banner.is_desktop);
         return banner.is_desktop === innerWidth > desktopWidth;
       });
-    console.log(currentBanners);
     setShownBanners(currentBanners);
   };
 
